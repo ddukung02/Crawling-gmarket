@@ -37,6 +37,17 @@ dependencies {
     testImplementation 'io.projectreactor:reactor-test'
     testImplementation 'org.springframework.security:spring-security-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Thymeleaf 의존성 (Spring WebFlux와 함께 사용 가능)
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+    // Thymeleaf와 Spring Security 6 연동을 위한 의존성
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.1.RELEASE'
+
+    // Spring Security 6.3.3
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.security:spring-security-oauth2-client:6.3.3'
+    implementation 'org.springframework.security:spring-security-oauth2-jose:6.3.3'
 }
 
 tasks.named('test') {

@@ -11,7 +11,7 @@ public class HomeController {
     @GetMapping("/")
     public Mono<String> home(Model model) {
         // 데이터 설정
-        model.addAttribute("message", "Hello, Reactive Thymeleaf!");
-        return Mono.just("home");  // home.html 템플릿을 렌더링
+
+        return Mono.just("index");  // home.html 템플릿을 렌더링
     }
 }
